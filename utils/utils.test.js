@@ -27,4 +27,18 @@ it('should return user\'s name', () => {
   expect(name).toBe(`My name is ade and surname is segun`)
 })
 
+it('It should asyc add two numbers', (done) => {
+  utils.asyncAdd(3, 4, (sum) => {
+    expect(sum).toBe(7)
+    done()
+  })
+})
+
+it('It should square a number', (done) => {
+  utils.asyncSquare(3, (square) => {
+    expect(square).toBe(9)
+    done()
+  })
+})
+
 // nodemon --exec 'npm test' // let's you watch you test suites
